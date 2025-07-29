@@ -209,8 +209,8 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/_index"
-    media_folder: "content/authors/{{slug}}"
-    public_folder: "."
+    media_folder: ""
+    public_folder: ""
     editor:
       preview: false
     fields:
