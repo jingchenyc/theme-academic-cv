@@ -11,8 +11,6 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    media_folder: "static/img/blog"
-    public_folder: "/img/blog"
     editor:
       preview: false
     fields:
@@ -32,8 +30,8 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
-    media_folder: ""
-    public_folder: ""
+    media_folder: "content/publication/{{slug}}"
+    public_folder: "."
     editor:
       preview: false
     fields:
@@ -164,7 +162,7 @@ collections:
           name: "featured_image",
           widget: "image",
           required: false,
-          hint: "Upload featured image (will be saved as featured.jpg)",
+          hint: "Upload featured image for this publication",
         }
       - label: "Image Settings"
         name: "image"
