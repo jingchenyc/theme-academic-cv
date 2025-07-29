@@ -273,8 +273,8 @@ collections:
           required: false,
           hint: "Upload avatar image (will be saved as avatar.jpg)",
           accept: "image/*",
-          media_folder: "",
-          public_folder: "",
+          media_folder: "/content/authors/admin",
+          public_folder: ".",
         }
       - label: "Organizations"
         name: "organizations"
