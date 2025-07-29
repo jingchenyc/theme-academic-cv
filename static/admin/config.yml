@@ -1,0 +1,191 @@
+backend:
+  name: git-gateway
+  branch: main # 你的主分支名稱
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "publication"
+    label: "Publications"
+    folder: "content/publication"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - label: "Authors"
+        name: "authors"
+        widget: "list"
+        allow_add: true
+        field: { label: "Author", name: "author", widget: "string" }
+        required: true
+      - label: "Author Notes"
+        name: "author_notes"
+        widget: "list"
+        required: false
+        field: { label: "Note", name: "note", widget: "string" }
+      - {
+          label: "Publication Date",
+          name: "date",
+          widget: "datetime",
+          required: true,
+        }
+      - { label: "DOI", name: "doi", widget: "string", required: false }
+      - {
+          label: "Publish Date",
+          name: "publishDate",
+          widget: "datetime",
+          required: false,
+          hint: "Schedule page publish date (NOT publication's date)",
+        }
+      - label: "Publication Type"
+        name: "publication_types"
+        widget: "select"
+        multiple: true
+        required: true
+        options:
+          - { label: "Conference Paper", value: "paper-conference" }
+          - { label: "Journal Article", value: "article-journal" }
+          - { label: "Preprint", value: "article" }
+          - { label: "Book", value: "book" }
+          - { label: "Book Chapter", value: "chapter" }
+          - { label: "Thesis", value: "thesis" }
+          - { label: "Patent", value: "patent" }
+      - {
+          label: "Publication Venue",
+          name: "publication",
+          widget: "string",
+          required: false,
+          hint: "e.g., *Journal Name, Volume*(Issue)",
+        }
+      - {
+          label: "Publication Short",
+          name: "publication_short",
+          widget: "string",
+          required: false,
+          hint: "Abbreviated publication name",
+        }
+      - { label: "Abstract", name: "abstract", widget: "text", required: true }
+      - {
+          label: "Summary",
+          name: "summary",
+          widget: "text",
+          required: false,
+          hint: "Optional shortened abstract",
+        }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - label: "Custom Links"
+        name: "links"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - { label: "PDF URL", name: "url_pdf", widget: "string", required: false }
+      - {
+          label: "Code URL",
+          name: "url_code",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Dataset URL",
+          name: "url_dataset",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Poster URL",
+          name: "url_poster",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Project URL",
+          name: "url_project",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Slides URL",
+          name: "url_slides",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Source URL",
+          name: "url_source",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Video URL",
+          name: "url_video",
+          widget: "string",
+          required: false,
+        }
+      - label: "Featured Image"
+        name: "image"
+        widget: "object"
+        required: false
+        fields:
+          - {
+              label: "Caption",
+              name: "caption",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Focal Point",
+              name: "focal_point",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Preview Only",
+              name: "preview_only",
+              widget: "boolean",
+              default: false,
+            }
+      - label: "Associated Projects"
+        name: "projects"
+        widget: "list"
+        required: false
+        field: { label: "Project", name: "project", widget: "string" }
+        hint: "Enter project folder names without extension"
+      - {
+          label: "Slides",
+          name: "slides",
+          widget: "string",
+          required: false,
+          hint: "Slide deck filename without extension",
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
