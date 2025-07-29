@@ -204,14 +204,15 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: false }
 
   - name: "authors"
-    label: "Authors"
-    files:
-      - file: "content/authors/admin/_index.md"
-        label: "Admin Author"
-        name: "admin"
-        media_folder: "content/authors/admin"
-        public_folder: "."
-        fields:
+    label: "Authors" 
+    folder: "content/authors"
+    create: false
+    slug: "{{slug}}"
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    filter: {field: "superuser", value: true}
+    fields:
           - label: "Display Name"
             name: "title"
             widget: "string"
@@ -260,8 +261,6 @@ collections:
           config:
             max_file_size: 5000000
             choose_url: false
-        media_folder: "content/authors/admin"
-        public_folder: "."
       - label: "Organizations"
         name: "organizations"
         widget: "list"
