@@ -32,7 +32,7 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
-    media_folder: "content/publication/{{slug}}"
+    media_folder: "{{dirname}}"
     public_folder: "."
     editor:
       preview: false
@@ -159,18 +159,18 @@ collections:
           widget: "string",
           required: false,
         }
-      - label: "Featured Image"
+      - {
+          label: "Featured Image",
+          name: "featured_image",
+          widget: "image",
+          required: false,
+          hint: "Upload featured image (will be saved as featured.jpg)",
+        }
+      - label: "Image Settings"
         name: "image"
         widget: "object"
         required: false
         fields:
-          - {
-              label: "Upload Image",
-              name: "filename",
-              widget: "image",
-              required: false,
-              hint: "Upload featured image (recommended: featured.jpg or featured.png)",
-            }
           - {
               label: "Caption",
               name: "caption",
