@@ -266,14 +266,18 @@ collections:
           widget: "string",
           required: false,
         }
-      - {
-          label: "Avatar Image",
-          name: "avatar",
-          widget: "image",
-          required: false,
-          hint: "Upload avatar image (will be saved as avatar.jpg)",
-          default: "avatar.jpg",
-        }
+      - label: "Avatar Image"
+        name: "avatar"
+        widget: "image"
+        required: false
+        hint: "Upload avatar image (must be named avatar.jpg)"
+        default: "avatar.jpg"
+        media_library:
+          config:
+            max_file_size: 5000000
+            choose_url: false
+        media_folder: "content/authors/admin"
+        public_folder: "."
       - label: "Organizations"
         name: "organizations"
         widget: "list"

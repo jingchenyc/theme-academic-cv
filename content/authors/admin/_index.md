@@ -8,7 +8,7 @@ status:
 superuser: true
 highlight_name: true
 role: Chief Scientist
-avatar_image: avatar.jpg
+avatar: avatar.jpg
 organizations:
   - name: OpenAI
     url: https://openai.com/
