@@ -269,12 +269,10 @@ collections:
       - {
           label: "Avatar Image",
           name: "avatar",
-          widget: "file",
+          widget: "image",
           required: false,
           hint: "Upload avatar image (will be saved as avatar.jpg)",
-          accept: "image/*",
-          media_folder: "/content/authors/admin",
-          public_folder: ".",
+          default: "avatar.jpg",
         }
       - label: "Organizations"
         name: "organizations"
