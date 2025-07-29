@@ -6,6 +6,7 @@ publication_types:
 publication: dfa
 abstract: dfadf
 featured: true
+featured_image: featured.jpg
 image:
   preview_only: false
   filename: featured.jpg
