@@ -202,3 +202,226 @@ collections:
           hint: "Slide deck filename without extension",
         }
       - { label: "Body", name: "body", widget: "markdown", required: false }
+
+  - name: "authors"
+    label: "Authors"
+    folder: "content/authors"
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/_index"
+    media_folder: "content/authors/{{slug}}"
+    public_folder: "."
+    editor:
+      preview: false
+    fields:
+      - {
+          label: "Display Name",
+          name: "title",
+          widget: "string",
+          required: true,
+        }
+      - {
+          label: "Name Pronunciation",
+          name: "name_pronunciation",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "First Name",
+          name: "first_name",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Last Name",
+          name: "last_name",
+          widget: "string",
+          required: false,
+        }
+      - label: "Status"
+        name: "status"
+        widget: "object"
+        required: false
+        fields:
+          - {
+              label: "Icon",
+              name: "icon",
+              widget: "string",
+              required: false,
+              hint: "Emoji for status",
+            }
+      - {
+          label: "Primary User",
+          name: "superuser",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Highlight Name",
+          name: "highlight_name",
+          widget: "boolean",
+          default: false,
+        }
+      - {
+          label: "Role/Position",
+          name: "role",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Avatar Image",
+          name: "avatar_image",
+          widget: "image",
+          required: false,
+          hint: "Upload avatar image (will be saved as avatar.jpg)",
+        }
+      - label: "Organizations"
+        name: "organizations"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string", required: false }
+      - label: "Social Profiles"
+        name: "profiles"
+        widget: "list"
+        required: false
+        fields:
+          - {
+              label: "Icon",
+              name: "icon",
+              widget: "string",
+              hint: "e.g., at-symbol, brands/github",
+            }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Label", name: "label", widget: "string" }
+      - label: "Interests"
+        name: "interests"
+        widget: "list"
+        required: false
+        field: { label: "Interest", name: "interest", widget: "string" }
+      - label: "Education"
+        name: "education"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Area", name: "area", widget: "string" }
+          - { label: "Institution", name: "institution", widget: "string" }
+          - { label: "Start Date", name: "date_start", widget: "date" }
+          - {
+              label: "End Date",
+              name: "date_end",
+              widget: "date",
+              required: false,
+            }
+          - {
+              label: "Summary",
+              name: "summary",
+              widget: "text",
+              required: false,
+            }
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+      - label: "Work Experience"
+        name: "work"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Position", name: "position", widget: "string" }
+          - { label: "Company Name", name: "company_name", widget: "string" }
+          - {
+              label: "Company URL",
+              name: "company_url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Company Logo",
+              name: "company_logo",
+              widget: "string",
+              required: false,
+            }
+          - { label: "Start Date", name: "date_start", widget: "date" }
+          - {
+              label: "End Date",
+              name: "date_end",
+              widget: "date",
+              required: false,
+            }
+          - {
+              label: "Summary",
+              name: "summary",
+              widget: "text",
+              required: false,
+            }
+      - label: "Skills"
+        name: "skills"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Category Name", name: "name", widget: "string" }
+          - { label: "Color", name: "color", widget: "string", required: false }
+          - {
+              label: "Border Color",
+              name: "color_border",
+              widget: "string",
+              required: false,
+            }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Percent",
+                  name: "percent",
+                  widget: "number",
+                  required: false,
+                }
+              - {
+                  label: "Icon",
+                  name: "icon",
+                  widget: "string",
+                  required: false,
+                }
+      - label: "Languages"
+        name: "languages"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Language", name: "name", widget: "string" }
+          - { label: "Percent", name: "percent", widget: "number" }
+      - label: "Awards"
+        name: "awards"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string", required: false }
+          - { label: "Date", name: "date", widget: "date" }
+          - { label: "Awarder", name: "awarder", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "string", required: false }
+          - {
+              label: "Certificate URL",
+              name: "certificate_url",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Summary",
+              name: "summary",
+              widget: "text",
+              required: false,
+            }
+      - { label: "About Me", name: "body", widget: "markdown", required: false }
