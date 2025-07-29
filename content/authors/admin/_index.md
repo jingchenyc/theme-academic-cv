@@ -1,5 +1,5 @@
 ---
-title: 吳健雄
+title: 吳健雄ㄉˋ
 name_pronunciation: Chien Shiung Wu
 first_name: Shiung Wu
 last_name: Chien
