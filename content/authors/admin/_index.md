@@ -1,5 +1,5 @@
 ---
-title: 吳健雄ㄉˋ
+title: 吳健雄
 name_pronunciation: Chien Shiung Wu
 first_name: Shiung Wu
 last_name: Chien
@@ -8,7 +8,7 @@ status:
 superuser: true
 highlight_name: true
 role: Chief Scientist
-avatar_image: avatar.jpg
+avatar: avatar.jpg
 organizations:
   - name: OpenAI
     url: https://openai.com/
@@ -133,7 +133,6 @@ awards:
       day-to-day R programming tool that simplifies some of the functions that
       you write. R6 is especially useful for industry-specific analyses, working
       with web APIs, and building GUIs.
-avatar: avatar.jpg
 ---
 
 ## About Me

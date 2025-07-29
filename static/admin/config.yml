@@ -212,60 +212,44 @@ collections:
         media_folder: "content/authors/admin"
         public_folder: "."
         fields:
-      - {
-          label: "Display Name",
-          name: "title",
-          widget: "string",
-          required: true,
-        }
-      - {
-          label: "Name Pronunciation",
-          name: "name_pronunciation",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "First Name",
-          name: "first_name",
-          widget: "string",
-          required: false,
-        }
-      - {
-          label: "Last Name",
-          name: "last_name",
-          widget: "string",
-          required: false,
-        }
+          - label: "Display Name"
+            name: "title"
+            widget: "string"
+            required: true
+          - label: "Name Pronunciation"
+            name: "name_pronunciation"
+            widget: "string"
+            required: false
+          - label: "First Name"
+            name: "first_name"
+            widget: "string"
+            required: false
+          - label: "Last Name"
+            name: "last_name"
+            widget: "string"
+            required: false
       - label: "Status"
         name: "status"
         widget: "object"
         required: false
         fields:
-          - {
-              label: "Icon",
-              name: "icon",
-              widget: "string",
-              required: false,
-              hint: "Emoji for status",
-            }
-      - {
-          label: "Primary User",
-          name: "superuser",
-          widget: "boolean",
-          default: false,
-        }
-      - {
-          label: "Highlight Name",
-          name: "highlight_name",
-          widget: "boolean",
-          default: false,
-        }
-      - {
-          label: "Role/Position",
-          name: "role",
-          widget: "string",
-          required: false,
-        }
+          - label: "Icon"
+            name: "icon"
+            widget: "string"
+            required: false
+            hint: "Emoji for status"
+          - label: "Primary User"
+            name: "superuser"
+            widget: "boolean"
+            default: false
+          - label: "Highlight Name"
+            name: "highlight_name"
+            widget: "boolean"
+            default: false
+          - label: "Role/Position"
+            name: "role"
+            widget: "string"
+            required: false
       - label: "Avatar Image"
         name: "avatar"
         widget: "image"
@@ -283,8 +267,13 @@ collections:
         widget: "list"
         required: false
         fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "URL", name: "url", widget: "string", required: false }
+          - label: "Name"
+            name: "name"
+            widget: "string"
+          - label: "URL"
+            name: "url"
+            widget: "string"
+            required: false
       - label: "Social Profiles"
         name: "profiles"
         widget: "list"
