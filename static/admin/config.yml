@@ -11,12 +11,19 @@ collections:
     folder: "content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "{{dirname}}"
+    public_folder: "{{dirname}}"
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Upload a featured image for this blog post"
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "publication"
@@ -25,8 +32,8 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
-    media_folder: ""
-    public_folder: ""
+    media_folder: "{{dirname}}"
+    public_folder: "{{dirname}}"
     editor:
       preview: false
     fields:
@@ -158,6 +165,13 @@ collections:
         required: false
         fields:
           - {
+              label: "Upload Image",
+              name: "filename",
+              widget: "image",
+              required: false,
+              hint: "Upload featured image (recommended: featured.jpg or featured.png)",
+            }
+          - {
               label: "Caption",
               name: "caption",
               widget: "string",
@@ -168,6 +182,7 @@ collections:
               name: "focal_point",
               widget: "string",
               required: false,
+              hint: "Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight",
             }
           - {
               label: "Preview Only",
