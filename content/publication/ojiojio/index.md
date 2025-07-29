@@ -11,4 +11,5 @@ featured: true
 links: []
 image:
   preview_only: false
+  filename: ojiojio/featured.jpg
 ---
