@@ -30,8 +30,8 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
-    media_folder: "content/publication/{{slug}}"
-    public_folder: "."
+    media_folder: ""
+    public_folder: ""
     editor:
       preview: false
     fields:
@@ -206,11 +206,7 @@ collections:
   - name: "authors"
     label: "Authors"
     folder: "content/authors"
-    create: true
-    slug: "{{slug}}"
-    path: "{{slug}}/_index"
-    media_folder: ""
-    public_folder: ""
+    create: false
     editor:
       preview: false
     fields:
@@ -270,7 +266,7 @@ collections:
         }
       - {
           label: "Avatar Image",
-          name: "avatar_image",
+          name: "avatar",
           widget: "image",
           required: false,
           hint: "Upload avatar image (will be saved as avatar.jpg)",
