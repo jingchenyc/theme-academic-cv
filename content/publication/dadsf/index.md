@@ -8,5 +8,5 @@ abstract: dfadf
 featured: true
 image:
   preview_only: false
-  filename: dadsf/featured.jpg
+  filename: featured.jpg
 ---
