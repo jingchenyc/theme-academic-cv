@@ -205,15 +205,11 @@ collections:
 
   - name: "authors"
     label: "Authors"
-    folder: "content/authors"
-    create: true
-    slug: "{{slug}}"
-    path: "{{slug}}/_index"
-    media_folder: ""
-    public_folder: ""
-    editor:
-      preview: false
-    fields:
+    files:
+      - file: "content/authors/admin/_index.md"
+        label: "Admin Author"
+        name: "admin"
+        fields:
       - {
           label: "Display Name",
           name: "title",
@@ -274,6 +270,7 @@ collections:
           widget: "image",
           required: false,
           hint: "Upload avatar image (will be saved as avatar.jpg)",
+          choose_url: false,
         }
       - label: "Organizations"
         name: "organizations"
