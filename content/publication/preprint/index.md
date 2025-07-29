@@ -2,9 +2,9 @@
 title: An example preprint / working paper
 authors:
   - admin
-date: 2019-04-07T00:00:00Z
+date: 2019-04-07T00:00:00.000Z
 doi: ""
-publishDate: 2017-01-01T00:00:00Z
+publishDate: 2017-01-01T00:00:00.000Z
 publication_types:
   - article
 publication: ""
@@ -38,7 +38,7 @@ image:
   caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)"
   focal_point: ""
   preview_only: false
-  filename: preprint/img_1568.jpeg
+  filename: preprint/featured.jpg
 projects:
   - internal-project
 slides: example
