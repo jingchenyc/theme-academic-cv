@@ -209,6 +209,8 @@ collections:
       - file: "content/authors/admin/_index.md"
         label: "Admin Author"
         name: "admin"
+        media_folder: "content/authors/admin"
+        public_folder: "."
         fields:
       - {
           label: "Display Name",
@@ -267,10 +269,12 @@ collections:
       - {
           label: "Avatar Image",
           name: "avatar",
-          widget: "image",
+          widget: "file",
           required: false,
           hint: "Upload avatar image (will be saved as avatar.jpg)",
-          choose_url: false,
+          accept: "image/*",
+          media_folder: "",
+          public_folder: "",
         }
       - label: "Organizations"
         name: "organizations"
