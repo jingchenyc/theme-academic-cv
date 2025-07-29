@@ -30,8 +30,8 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
-    media_folder: ""
-    public_folder: ""
+    media_folder: "content/publication/{{slug}}"
+    public_folder: "."
     editor:
       preview: false
     fields:
@@ -206,7 +206,11 @@ collections:
   - name: "authors"
     label: "Authors"
     folder: "content/authors"
-    create: false
+    create: true
+    slug: "{{slug}}"
+    path: "{{slug}}/_index"
+    media_folder: ""
+    public_folder: ""
     editor:
       preview: false
     fields:
